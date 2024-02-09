@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QUIZ @ JSR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">QUIZ @ JSR</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#team-section" class="nav-link"><span>Team</span></a></li>
+			  <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_2.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">We are <span>Team QUIZ@JSR</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Quiz Organizer  ',
+						'Social Worker  ',
+						'Event Organizer   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>The Power of Literal Expression</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.facebook.com/QUIZJSRteam" class="btn btn-primary py-3 px-4">Facebook</a> 
+							<!-- <a href="https://github.com/rishabhnmishra" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-us.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>QUIZ @ JSR</span></p>
+										<p><span class="title-s">ESTD: </span> <span>2014</span></p>
+										<p><span class="title-s">Experience: </span> <span>10 Years +</span></p>
+										<p><span class="title-s">Address: </span> <span>West Bengal,India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">projects Ratio</p>
+									<span>"দিদি নম্বর 1"</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>"দাদাগিরি"</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>"Inter-School Quiz"</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span> "Intra-School Quiz" </span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>"Others Quiz"</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About Us</h1>
+								<h2 class="mb-4">About Us</h2>
+								
+								<p>Welcome to Quiz@JSR, your premier destination for professional quiz organizing services. With over a decade of experience in the industry, we have been proudly serving our clients since our establishment in 2014. At Quiz@JSR, we are passionate about the art of quizzing and dedicated to delivering top-notch events that engage, entertain, and educate participants of all ages.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Our Journey:</span> <span>Founded in 2014 by a team of enthusiastic quizzers, Quiz@JSR quickly rose to prominence in the quiz organizing landscape. Over the years, we have honed our craft, refined our techniques, and expanded our reach to become a trusted name in the industry. Our journey has been characterized by a relentless pursuit of excellence and a commitment to delivering memorable quiz experiences.</span></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="300">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="#services-section" class="btn btn-primary py-3 px-3">Services</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+<!-- ======= Our Team Section ======= -->
+<section id="team-section" class="team">
+	<div class="container">
+
+	  <div class="section-title">
+		<div class="row justify-content-center pb-5">
+			<div class="col-md-10 heading-section text-center ftco-animate">
+				<h1 class="big big-2">Team</h1>
+			  <h2 class="mb-4">Team</h2>
+			
+		<p>"Each team member brings a unique blend of skills and expertise to our organization, driving us towards success." - TEAM QUIZ@JSR</p>
+	  </div>
+
+	  <div class="row">
+
+		<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+		  <div class="member">
+			<div class="pic"><img src="images/team_1.png" class="img-fluid" alt=""></div>
+			<div class="member-info">
+			  <h4>Santanu Mondal</h4>
+			  <span>CEO/ANCHOR</span>
+			  <div class="social">
+				<a href="https://www.facebook.com/profile.php?id=100008541461503"><i class="icon-facebook"></i></a>
+				<a href=""><i class="icon-twitter"></i></a>
+				<a href=""><i class="icon-instagram"></i></a>
+				<a href=""><i class="icon-linkedin"></i></a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+		  <div class="member">
+			<div class="pic"><img src="images/team_2.png" class="img-fluid" alt=""></div>
+			<div class="member-info">
+			  <h4>Raja Mondal</h4>
+			  <span>SCOREER</span>
+			  <div class="social">
+				<a href="https://www.facebook.com/raja.mondal.3726"><i class="icon-facebook"></i></a>
+				  <a href=""><i class="icon-twitter"></i></a>
+				  <a href=""><i class="icon-instagram"></i></a>
+				  <a href=""><i class="icon-linkedin"></i></a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+		  <div class="member">
+			<div class="pic"><img src="images/team_3.jpg" class="img-fluid" alt=""></div>
+			<div class="member-info">
+			  <h4>Joy Banerjee</h4>
+			  <span>ASSISTANT ANCHOR</span>
+			  <div class="social">
+				<a href="https://www.facebook.com/profile.php?id=100009481604117"><i class="icon-facebook"></i></a>
+				<a href=""><i class="icon-twitter"></i></a>
+				<a href=""><i class="icon-instagram"></i></a>
+				<a href=""><i class="icon-linkedin"></i></a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+		  <div class="member">
+			<div class="pic"><img src="images/team_4.png" class="img-fluid" alt=""></div>
+			<div class="member-info">
+			  <h4>Pinaki Prasad Patra</h4>
+			  <span>MANNAGER/ANCHOR</span>
+			  <div class="social">
+				<a href="https://www.facebook.com/pinakiprasad.patra.3"><i class="icon-facebook"></i></a>
+				  <a href=""><i class="icon-twitter"></i></a>
+				  <a href=""><i class="icon-instagram"></i></a>
+				  <a href=""><i class="icon-linkedin"></i></a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+			<div class="member">
+			  <div class="pic"><img src="images/team_5.png" class="img-fluid" alt=""></div>
+			  <div class="member-info">
+				<h4>Suman Dinda</h4>
+				<span>ASSISTANT SCOREER</span>
+				<div class="social">
+					<a href="https://www.facebook.com/debabrata0333"><i class="icon-facebook"></i></a>
+					<a href=""><i class="icon-twitter"></i></a>
+					<a href=""><i class="icon-instagram"></i></a>
+					<a href=""><i class="icon-linkedin"></i></a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+			<div class="member">
+			  <div class="pic"><img src="images/team_6.png" class="img-fluid" alt=""></div>
+			  <div class="member-info">
+				<h4>Subhankar Ghorai</h4>
+				<span>ASSISTANT TECHNICIAN</span>
+				<div class="social">
+					<a href="https://www.facebook.com/profile.php?id=100004592747358"><i class="icon-facebook"></i></a>
+					<a href=""><i class="icon-twitter"></i></a>
+					<a href=""><i class="icon-instagram"></i></a>
+					<a href=""><i class="icon-linkedin"></i></a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+			<div class="member">
+			  <div class="pic"><img src="images/team_7.png" class="img-fluid" alt=""></div>
+			  <div class="member-info">
+				<h4>Biswajit Sau</h4>
+				<span>TECHNICIAN</span>
+				<div class="social">
+					<a href="https://www.facebook.com/biswajit.sau.1042"><i class="icon-facebook"></i></a>
+					<a href=""><i class="icon-twitter"></i></a>
+					<a href=""><i class="icon-instagram"></i></a>
+					<a href=""><i class="icon-linkedin"></i></a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+			<div class="member">
+			  <div class="pic"><img src="images/team_8.png" class="img-fluid" alt=""></div>
+			  <div class="member-info">
+				<h4>Arpan Senapati</h4>
+				<span>TECHNICIAN</span>
+				<div class="social">
+					<a href="https://www.facebook.com/senapati.arpan.7/"><i class="icon-facebook"></i></a>
+					<a href=""><i class="icon-twitter"></i></a>
+					<a href=""><i class="icon-instagram"></i></a>
+					<a href=""><i class="icon-linkedin"></i></a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <img src="images/team_main.jpg" height="400px" width="1200px">
+
+       </div>
+	  </div>
+      </div>
+	</div>
+  </section><!-- End Our Team Section -->
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="services-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Services</h1>
+            <h2 class="mb-4">Our Services</h2>
+            <p>We provides many services. Check our services and read our terms and conditions. For further details<a href="#contact-section"> Contact Us</a></p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">What We Do</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">দিদি নম্বর - 1 </span>
+						<h2>Quiz Program for Women/Ladies/Girls</h2>
+						<span class="position">₹4000</span>
+						<p class="mt-4">"DIDI Number 1 Quiz: Empowering women through knowledge and fun, where intelligence meets grace on the ultimate quiz platform."  
+							<ul>
+								<li>This is an 8 or 6 team game. In each group, there must be participation of two women/ladies/girls.</li>
+								<li>The game consists of seven rounds including Audio and Video Round.</li>
+								<li>It takes a minimum of two hours and a maximum of four hours to complete the game.</li>
+							    <li>"The game is conducted using full LED screens or projectors, with audio, video, and more attractive graphics."</li>
+							</ul>
+							<div class="col-md-6 text-center ftco-animate">
+								<p><a href="Booking\booking.html" class="btn btn-primary py-4 px-5">BOOK NOW</a></p>
+							</div>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">দাদাগিরি</span>
+						<h2>Quiz Program for MAN/WOMEN/BOYS/GIRLS</h2>
+						<span class="position">₹4500</span>
+						<p class="mt-4">"DADAGIRI Quiz: Dadagiri Quiz, an engaging quiz program, challenges participants with intriguing questions, fostering knowledge and fun."
+							<ul>
+								<li>This is an 8 or 6 team game. In each group, there must be participation of two man/women/boys/girls.</li>
+								<li>The game consists of seven rounds including Googly Round.</li>
+								<li>It takes a minimum of three hours and a maximum of four and half hours to complete the game.</li>
+								<li>"The game is conducted using full LED screens or projectors, with audio, video, and more attractive graphics."</li>
+							</ul>
+							<div class="col-md-6 text-center ftco-animate">
+								<p><a href="Booking\booking.html" class="btn btn-primary py-4 px-5">BOOK NOW</a></p>
+							</div>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Inter-School QUIZ</span>
+						<h2>Quiz Program for INTER SCHOOL STUDENT</h2>
+						<span class="position">₹3000</span>
+						<p class="mt-4">"INTER-SCHOOL Quiz: The Inter-School Quiz is a platform where students showcase their academic prowess and compete in a battle of wits, fostering friendly rivalry and intellectual growth among schools."  
+							<ul>
+								<li>This is an 8 or 6 team game. In each group, there must be participants.</li>
+								<li>The game consists of seven rounds including Audio and Video Round.</li>
+								<li>It takes a minimum of two hours and a maximum of three hours to complete the game.</li>
+							    <li>"The game is conducted using full LED screens or projectors, with audio, video, and more attractive graphics."</li>
+							</ul>
+							<div class="col-md-6 text-center ftco-animate">
+								<p><a href="Booking\booking.html" class="btn btn-primary py-4 px-5">BOOK NOW</a></p>
+							</div>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Intra-School QUIZ</span>
+						<h2>Quiz Program for INTRA SCHOOL STUDENT</h2>
+						<span class="position">₹3500</span>
+						<p class="mt-4">"INTRA-SCHOOL Quiz: This offers students an opportunity to demonstrate their knowledge and critical thinking skills within their own school community, promoting friendly competition and academic excellence among peers."
+							<ul>
+								<li>This is an 8 or 6 team game. In each group, there must be participation of two man/women/boys/girls.</li>
+								<li>The game consists of seven rounds including Googly Round.</li>
+								<li>It takes a minimum of three hours and a maximum of four and half hours to complete the game.</li>
+								<li>"The game is conducted using full LED screens or projectors, with audio, video, and more attractive graphics."</li>
+							</ul>
+							<div class="col-md-6 text-center ftco-animate">
+								<p><a href="Booking\booking.html" class="btn btn-primary py-4 px-5">BOOK NOW</a></p>
+							</div>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+
+     <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the our all previous project and work demo.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/project_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">A DIDI NO 1 program organised by Balokrouth Mohila Agrani Sangh on Durga Puja Festival</a></h3>
+                <!-- <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/project_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">A INTER SCHOOL QUIZ program organised by Moyna Sanghashree Club</a></h3>
+                <!-- <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/project_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">A INTER SCHOOL QUIZ program organised by Jotmoniram Deshapran Prathamic Vidyalay</a></h3>
+                <!-- <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+	<!-- <div class="col-md-4 d-flex ftco-animate">
+		<div class="blog-entry justify-content-end">
+		<a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/project_2.jpg');">
+		</a>
+		<div class="text mt-3 float-right d-block">
+
+		  <h3 class="heading"><a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a></h3>
+		  <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
+		</div>
+	  </div>
+	</div> -->
+
+	<div class="row d-flex">
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="#" class="block-20 zoom-effect" style="background-image: url('images/project_6.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="#">A DIDI NO 1 program organised by Chenchuahat Durga Puja Comitee on Durga Puja Festival</a></h3>
+			  <!-- <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p> -->
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="#" class="block-20 zoom-effect" style="background-image: url('images/project_7.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="#">A DIDI NO 1 program organised by Joleswar Durga Puja Comitee on Durga Puja Festival</a></h3>
+			  <!-- <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p> -->
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="#" class="block-20 zoom-effect" style="background-image: url('images/project_8.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="#">A INTER SCHOOL QUIZ program organised by Nandanpur Prathamic Vidyalay</a></h3>
+			  <!-- <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+  <br>
+
+	
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/project_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#">A DIDI NO 1 program organised by Khukurdha Paschimpara Biharilal Prathamic Vidyalay</a></h3>
+				  <!-- <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p> -->
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/project_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#">A INTRA SCHOOL QUIZ organised by Khukurdha Paschimpara Biharilal Prathamic Vidyalay</a></h3>
+				  <!-- <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> -->
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+	  </div>
+
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="95">0</strong>
+                <span>দিদি নম্বর - 1</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="87">0</strong>
+                <span>দাদাগিরি</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="79">0</strong>
+                <span>Inter-School QUIZ</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="67">0</strong>
+                <span>Intra-School QUIZ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<a href="https://www.facebook.com/QUIZJSRteam"><span> Facebook </span> </a></h2>
+						<div class="heading"> <h4></h4> "We love to discovering new hidden talents and create some beutiful memory"</h4>
+						<br>
+						<p><a href="Booking\booking.html" class="btn btn-primary py-3 px-5">Book Now</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Us</h2>
+            <p>Below are the details to reach out to us!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p><a href="https://maps.app.goo.gl/zD2oUx4QDv2MRpLQA">
+					Gobindaagar,Daspur,<br>Paschim Medinipur,West Bengal,India-721146 </a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://9735259692">9735259692</a></p>
+	          </div>
+          </div>
+          
+		  <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			<div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+					<span class="icon-envelope"></span>
+				</div>
+				<h3 class="mb-4">Email</h3>
+				<p><a href="mailto:team.quizjsr@gmail.com">team.quizjsr@gmail.com</a></p>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			<div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+					<span class="icon-whatsapp"></span>
+				</div>
+				<h3 class="mb-4">WhatsApp</h3>
+				<p><a href="https://wa.me/8509051230">Click to Chat</a></p>
+			</div>
+		</div>
+<!-- contact -->
+<div class="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<form action="https://api.web3forms.com/submit" method="POST" class="main_form">
+					<div class="row">
+						<input type="hidden" name="access_key" value="1d83009f-d291-46e7-bf72-933417ffd1a9">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+							<input class="form-control" placeholder="Your name" type="text" name="Your Name">
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+							<input class="form-control" placeholder="Email" type="text" name="Email">
+						</div>
+						<div class=" col-md-12">
+							<input class="form-control" placeholder="Phone" type="text" name="Phone">
+						</div>
+						<div class="col-md-12">
+							<textarea class="textarea" placeholder="Message"></textarea>
+						</div>
+						<div class=" col-md-12">
+							<button class="send">Send</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end contact -->		
+		
+         
+		 
+		
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://wa.me/8509051230" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://youtube.com/@QUIZJSR"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/QUIZJSRteam"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This project is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://www.facebook.com/senapati.arpan.7" target="_blank">Senapati_Arpan</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
