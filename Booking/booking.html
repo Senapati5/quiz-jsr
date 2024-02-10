@@ -339,10 +339,6 @@
     </div>
     <!-- end menu -->
 
-    
-
-    
-    
 
     <div id="booking" class="reservations-main pad-top-100 pad-bottom-100">
         <div class="container">
@@ -350,91 +346,90 @@
                 <div class="form-reservations-box">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <h2 class="block-title text-center">
-						Reservations			
-					</h2>
+                            <h2 class="block-title text-center">Reservations</h2>
                         </div>
                         <h4 class="form-title">BOOKING FORM</h4>
                         <p>PLEASE FILL OUT ALL REQUIRED* FIELDS. THANKS!</p>
 
-                        <form id="contact-form" method="post" class="reservations-box" name="contactform" action="https://api.web3forms.com/submit">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="main_form">
+                            <div class="row">
                                 <input type="hidden" name="access_key" value="1d83009f-d291-46e7-bf72-933417ffd1a9">
-                                <div class="form-box">
-                                    <input type="text" name="form_name" id="form_name" placeholder="Organizer/Club Name" required="required" data-error="Firstname is required.">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                        <input class="" placeholder="Organizer/Club Name" type="text" name="Organizer/Club Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                        <input class="" placeholder="Head of the Organizer/Club" type="text" name="Head of the Organizer/Club">
+                                    </div>
                                 </div>
                             </div>
-                    
-                            <!-- end col -->
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" name="name" id="name" placeholder="Head of the Organizer/Club" required="required" data-error="E-mail id is required.">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                        <input class="" placeholder="Phone" type="text" name="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box1">
+                                        <input class="" placeholder="Email" type="text" name="Email">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="email" name="email" id="email" placeholder="E-Mail ID" required="required" data-error="E-mail id is required.">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                        <input class="" placeholder="Address" type="text" name="Address">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box1">
+                                        <input class="" placeholder="Date" type="date" name="Date">
+                                    </div>
                                 </div>
                             </div>
-                            <!-- end col -->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" name="phone" id="phone" placeholder="contact no.">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                        <input class="" placeholder="Time" type="time" name="Time">
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" name="date-picker" id="date-picker" placeholder="Date" required="required" data-error="Date is required." />
-                                </div>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" name="time-picker" id="time-picker" placeholder="Time" required="required" data-error="Time is required." />
-                                </div>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <select name="occasion" id="occasion" class="selectpicker">
-                                        <option selected disabled>Occasion</option>
-                                        <option>Durga Puja</option>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                                <select name="Occasion">
+                                                    <option value="" disabled selected>Select Occasion</option>
+                                                    <option>Durga Puja</option>
                                         <option>Laxmi Puja</option>
                                         <option>Kali Puja</option>
                                         <option>Saraswati Puja</option>
                                         <option>School Annual Program</option>
                                         <option>Club Annual Program</option>
                                         <option>Others</option>
-                                    </select>
+                                        </select>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                            <!-- end col -->
-                        
-                           
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <select name="preferred_food" id="preferred_food" class="selectpicker" required="required">
-                                        <option selected disabled>Services</option>
-                                        <option>দিদি নম্বর 1</option>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                        <select name="Services">
+                                            <option value="" disabled selected>Select Services</option>
+                                            <option>দিদি নম্বর 1</option>
                                         <option>দাদাগিরি</option>
                                         <option>INTER-SCHOOL QUIZ</option>
                                         <option>INTRA-SCHOOL QUIZ</option>
                                         <option>Others Quiz</option>
-                                    </select>
-                                </div>
+                                </select>
+                                
                             </div>
-                            <!-- end col -->
-
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <select name="no_of_persons" id="no_of_persons" class="selectpicker">
-                                        <option selected disabled>No. Of Team (approx)</option>
-                                        <option>1</option>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                                <select name="No. of Team (Approx)">
+                                                    <option value="" disabled selected>No. of Team (Approx)</option>
+                                                    <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
@@ -465,35 +460,45 @@
                                         <option>29</option>
                                         <option>30</option>
                                         <option>More than 30</option>
-                                    </select>
+                                        </select>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                            <!-- end col -->
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-box">
-                                    <input type="text" name="address" id="address" placeholder="Address" required="required" data-error="E-mail id is required.">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                        <img src="images/payment_qr.png" alt="" height="200px" width="200px"></center>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-box">
+                                        <!-- File Upload Input -->
+                                        Upload Payment ScreenShot
+                                        <input class="form-control" placeholder="Upload Payment ScreenShot" type="file" name="fileUpload">
+                                    </div>
                                 </div>
                             </div>
-                            <!-- end col -->
-
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="reserve-book-btn text-center">
-                                    <button class="hvr-underline-from-center" type="submit" value="SEND" id="submit">BOOK MY TABLE </button>
+                            
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="reserve-book-btn text-center">
+                                        <button class="hvr-underline-from-center">BOOK</button>
+                                    </div>
                                 </div>
+                               
                             </div>
-                            <!-- end col -->
                         </form>
-                        <!-- end form -->
                     </div>
-                    <!-- end col -->
                 </div>
-                <!-- end reservations-box -->
             </div>
-            <!-- end row -->
         </div>
-        <!-- end container -->
     </div>
-    <!-- end reservations-main -->
+    
+                                   
+                               
+                            
+                         
 
 
     <<div id="footer" class="footer-box pad-top-70">
